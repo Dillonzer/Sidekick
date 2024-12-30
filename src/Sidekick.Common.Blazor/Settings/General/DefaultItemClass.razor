@@ -1,0 +1,27 @@
+@using Sidekick.Common.Settings
+
+<FormCheckbox Value="@DefaultItemClassOption"
+              ValueChanged="@DefaultItemClassOptionChanged">
+    @Resources.Default_ItemClassOption
+</FormCheckbox>
+
+@inject SettingsResources Resources
+@inject ISettingsService SettingsService
+
+@code {
+
+    private bool DefaultItemClassOption { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DefaultItemClassOption = await SettingsService.GetBool(SettingKeys.DefaultItemClassOption);
+        await base.OnInitializedAsync();
+    }
+
+    private async Task DefaultItemClassOptionChanged(bool value)
+    {
+        DefaultItemClassOption = value;
+        await SettingsService.Set(SettingKeys.DefaultItemClassOption, value);
+    }
+
+}

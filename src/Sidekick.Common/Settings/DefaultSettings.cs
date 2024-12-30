@@ -55,4 +55,8 @@ public static class DefaultSettings
     ];
 
     public static bool SaveWindowPositions => false;
+
+    public static bool DefaultBaseTypeOption => true;
+
+    public static bool DefaultItemClassOption => false;
 }

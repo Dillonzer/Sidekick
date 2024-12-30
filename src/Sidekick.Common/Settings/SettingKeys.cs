@@ -55,4 +55,6 @@ public static class SettingKeys
     public const string WealthEnabled = nameof(WealthEnabled);
     public const string WealthTrackedTabs = nameof(WealthTrackedTabs);
     public const string WealthItemTotalMinimum = nameof(WealthItemTotalMinimum);
+    public const string DefaultBaseTypeOption = nameof(DefaultBaseTypeOption);
+    public const string DefaultItemClassOption = nameof(DefaultItemClassOption);
 }

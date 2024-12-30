@@ -285,4 +285,10 @@
   <data name="Bulk_Trade_Settings" xml:space="preserve">
     <value>대량 교환 세팅</value>
   </data>
+  <data name="Default_BaseTypeOption" xml:space="preserve">
+    <value>항상 기본 유형을 선택하세요</value>
+  </data>
+  <data name="Default_ItemClassOption" xml:space="preserve">
+    <value>항상 품목 분류를 선택하세요</value>
+  </data>
 </root>

@@ -339,4 +339,10 @@
   <data name="Chat_Commands_Kick" xml:space="preserve">
     <value>Expulser un joueur</value>
   </data>
+  <data name="Default_BaseTypeOption" xml:space="preserve">
+    <value>Sélectionnez toujours le type de base</value>
+  </data>
+  <data name="Default_ItemClassOption" xml:space="preserve">
+    <value>Sélectionnez toujours la classe d'article</value>
+  </data>
 </root>
