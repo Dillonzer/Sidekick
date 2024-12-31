@@ -354,10 +354,7 @@
   <data name="Chat_Commands_Kick" xml:space="preserve">
     <value>Kick a player</value>
   </data>
-  <data name="Default_BaseTypeOption" xml:space="preserve">
-    <value>Always select Base Type</value>
-  </data>
-  <data name="Default_ItemClassOption" xml:space="preserve">
-    <value>Always select Item Class</value>
+  <data name="DefaultItemSelection" xml:space="preserve">
+    <value>Default item selection</value>
   </data>
 </root>

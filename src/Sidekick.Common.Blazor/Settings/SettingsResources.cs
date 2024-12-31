@@ -25,6 +25,5 @@ public class SettingsResources(IStringLocalizer<SettingsResources> resources)
     public string WealthTracker_StashTabs => resources["WealthTracker_StashTabs"];
     public string WealthTracker_StashTabsInstructions => resources["WealthTracker_StashTabsInstructions"];
     public string UseInvariantForTradeResults => resources["UseInvariantForTradeResults"];
-    public string Default_BaseTypeOption => resources["Default_BaseTypeOption"];
-    public string Default_ItemClassOption => resources["Default_ItemClassOption"];
+    public string DefaultItemSelection => resources["DefaultItemSelection"];
 }

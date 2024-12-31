@@ -1,0 +1,45 @@
+@using Sidekick.Common.Blazor.Settings
+@using Sidekick.Common.Settings
+@using Sidekick.Common.Blazor.Settings.Components
+
+<FormSelect Label="@Resources["DefaultItemSelection"]"
+            Value="@DefaultItemSelection"
+            ValueChanged="DefaultItemSelectionChanged"
+            Options="Options"/>
+    
+@inject ISettingsService SettingsService
+@inject IStringLocalizer<SettingsResources> Resources
+
+@code {
+
+    private string? DefaultItemSelection { get; set; }
+
+    private List<SelectOption> Options { get; set; } =
+    [
+    ];
+
+    protected override async Task OnInitializedAsync()
+    {
+        DefaultItemSelection = await SettingsService.GetString(SettingKeys.DefaultItemSelection);
+        var defaultChoices = new List<string> {"base", "item"};
+        Options.Add(new SelectOption()
+                      {
+                          Value = "base",
+                          Label = "Base Type",
+                      });
+        Options.Add(new SelectOption()
+                      {
+                          Value = "item",
+                          Label = "Item Class",
+                      });
+
+        await base.OnInitializedAsync();
+    }
+
+    private async Task DefaultItemSelectionChanged(string? value)
+    {
+        DefaultItemSelection = value;
+        await SettingsService.Set(SettingKeys.DefaultItemSelection, value);
+    }
+
+}
